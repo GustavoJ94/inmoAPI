@@ -10,10 +10,14 @@
   "author": "@SAldrin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
-    "nodemon": "^1.11.0",
+    "body-parser": "^1.17.1",
     "compression": "*",
+    "express": "^4.15.2",
+    "helmet": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
     "morgan": "*",
-    "helmet": "*"
+    "nodemon": "^1.11.0",
+    "winston": "^2.3.1"
   }
 }
