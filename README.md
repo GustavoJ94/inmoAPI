@@ -16,7 +16,6 @@ GET localhost:3000/api/usuarios
 
  Lista todos los usuarios en formato JSON
  
- 
  .
  
 ```
@@ -35,3 +34,19 @@ Añade un usuario, valida los datos, los espera en formato JSON
 "fecha_de_registro": ""    //Opcional
 }
 ```
+
+
+
+.
+```
+POST localhost:3000/api/autenticar
+```
+Autentica un usuario, regresa un token que se debe pasar en cada peticion. Espera los datos de autenticacion de la siguiente forma
+```javascript
+{
+"login_usuario": "usuario",
+"login_phash": "contraseña"
+}
+```
+
+.
