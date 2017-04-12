@@ -12,8 +12,9 @@ ruta.get('/usuario/cedula/:cedula', function(req, res) {
 })
 
 //Nuevo usuario
-ruta.post('/usuario/', function(req, res) {
+ruta.post('/usuario', function(req, res) {
     usuario.nuevo(req, req.body)
 })
+
 
 module.exports = ruta
