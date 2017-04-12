@@ -1,0 +1,19 @@
+{
+  "name": "inmobiliaria",
+  "version": "1.0.0",
+  "description": "API del proyecto de inmobiliaria",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon servidor.js"
+  },
+  "author": "@SAldrin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "compression": "*",
+    "morgan": "*",
+    "helmet": "*"
+  }
+}
