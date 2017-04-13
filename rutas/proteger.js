@@ -10,6 +10,7 @@ ruta.use(function(req, res, next) {
 
             function(err, decoded) {
                 if (err) {
+                    r.res.status(401)
                     return res.json({
                         success: false,
                         message: 'Token invalido.'
@@ -22,7 +23,7 @@ ruta.use(function(req, res, next) {
 
     } else {
 
-        return res.status(403).send({
+        return res.status(400).send({
             success: false,
             message: 'Sin token.'
         });

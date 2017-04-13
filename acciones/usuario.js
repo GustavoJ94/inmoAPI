@@ -12,6 +12,7 @@ var nuevo = function(r, _usuario) {
             r.res.status(400)
         } else {
             global.log.info("Usuario creado: ", instancia)
+            r.res.status(201)
             r.res.json(instancia)
         }
     })
@@ -37,6 +38,7 @@ var autenticar = function(r) {
             }
 
             if (!usuario) {
+                r.res.status(403)
                 r.res.json({
                     autenticado: false,
                     mensaje: "Usuario/Contraseña incorrectos"
