@@ -31,6 +31,7 @@ app.get('/', function(req, res) {
 	res.send("For a moment, nothing happened. Then, after a second or so, nothing continued to happen.")
 })
 
+
 	//Autenticar
 app.use('/api', apiAuth)
 app.use('/api', apiTeapot)
