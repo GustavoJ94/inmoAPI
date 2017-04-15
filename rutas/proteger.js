@@ -6,11 +6,10 @@ ruta.use(function(req, res, next) {
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
     if (token) {
-        jwt.verify(token, process.env.JWT_SECRET,
-
+        jwt.verify(token, global.JWT_SECRETO,
             function(err, decoded) {
                 if (err) {
-                    r.res.status(401)
+                    res.status(401)
                     return res.json({
                         success: false,
                         message: 'Token invalido.'

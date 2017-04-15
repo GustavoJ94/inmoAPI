@@ -44,7 +44,7 @@ var autenticar = function(r) {
                     mensaje: "Usuario/Contraseña incorrectos"
                 })
             } else {
-                var token = jwt.sign( {usuario: usuario._id}, process.env.JWT_SECRET, {
+                var token = jwt.sign( {usuario: usuario._id, es_administrador: usuario.es_administrador}, global.JWT_SECRETO, {
                     expiresIn: "1d"
                 });
 

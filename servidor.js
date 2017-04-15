@@ -12,7 +12,7 @@ var app 		= express()
 
 app.use(helmet())
 app.use(cors())
-app.use(bodyParser.json())
+app.use(bodyParser.json({type: "*/*"}))
 app.use(morgan('dev'))
 app.use(compresion())
 // * Middleware * //
@@ -21,23 +21,32 @@ app.use(compresion())
 var apiUsuarios = require("./rutas/usuario.js")
 var apiAuth = require("./rutas/autenticar.js")
 var apiProteger = require("./rutas/proteger.js")
+var apiTeapot = require("./rutas/teapot.js")
 // * Rutas * //
 
 //Rutas sin autenticacion
-//Autenticar
+	//Autenticar
 app.use('/api', apiAuth)
+app.use('/api', apiTeapot)
 
 //Pedir autenticacion
 app.use(apiProteger)
 
-//Todas las siguientes rutas requieren autenticacion
+//Rutas que requieren autenticacion
+	//Rutas que requieren permisos de usuario normal
+
+	//Rutas que requieren permisos de administrador
 app.use('/api', apiUsuarios)
 
 
-app.set("SECRETO", process.env.JWT_SECRET);
+//Fin
+app.use(function (req, res, next) {
+  res.status(404)
+  res.json({error:"No hay nada por aqui"})
+})
 
-app.listen(process.env.PUERTO || 3000, function () {
-  global.log.info('Aplicacion corriendo en puerto '+(process.env.PUERTO || 3000))
-  global.log.info('Robot = '+process.env.ROBOT)
-  global.log.info('Jwt secreto = '+process.env.JWT_SECRET)
+
+app.listen(global.puerto || 3000, function () {
+  global.log.info('Aplicacion corriendo en puerto '+(global.puerto || 3000))
+  global.log.info('Jwt secreto = '+global.JWT_SECRETO)
 })

@@ -5,7 +5,8 @@
   "main": "servidor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ROBOT=sensible JWT_SECRET=cambiame PUERTO=3000 nodemon servidor.js"
+    "start": "ROBOT=sensible JWT_SECRET=cambiame PUERTO=3000 nodemon servidor.js",
+    "windows": "node servidor.js"
   },
   "author": "@SAldrin",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "mongoose": "*",
     "morgan": "*",
     "nodemon": "^1.11.0",
+    "sequelize": "^3.30.4",
     "sha256": "^0.2.0",
     "winston": "^2.3.1"
   }
