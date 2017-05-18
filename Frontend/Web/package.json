@@ -1,0 +1,8 @@
+{
+  "name": "Web",
+  "version": "0.1.0",
+  "description": "Aplicacion web Inmo",
+  "main": "inicio.js",
+  "author": "@SAldrin",
+  "license": "MIT"
+}
