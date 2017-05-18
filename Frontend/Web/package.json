@@ -3,6 +3,23 @@
   "version": "0.1.0",
   "description": "Aplicacion web Inmo",
   "main": "inicio.js",
-  "author": "@SAldrin",
-  "license": "MIT"
+  "author": "Estudiantes de software1",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.11.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "serve": "^5.1.5",
+    "webpack": "^2.5.1"
+  },
+  "scripts": {
+    "automatico": "webpack -d --watch",
+    "compilar": "webpack",
+    "servidor": "serve ./public"
+  }
 }
