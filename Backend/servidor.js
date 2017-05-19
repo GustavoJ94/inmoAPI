@@ -24,17 +24,32 @@ var apiProteger = require("./rutas/proteger.js")
 var apiTeapot = require("./rutas/teapot.js")
 // * Rutas * //
 
+/* Las rutas llegan, y van intentando entrar en la primera funcion que coincida
+	
+	|
+ Peticion
+	|
+    v
+*/
 
 //Rutas sin autenticacion
-	//Hola :D
 app.get('/', function(req, res) {
-	res.send("For a moment, nothing happened. Then, after a second or so, nothing continued to happen.")
+	res.send("Aqui no hay nada.")
 })
-
 
 	//Autenticar
 app.use('/api', apiAuth)
 app.use('/api', apiTeapot)
+
+
+/* Las rutas intentan pasar por esta linea, pero solo pasan si pertenecen a un usuario autenticado
+	
+	|
+ Peticion
+	|
+	v
+
+*/
 
 //Pedir autenticacion
 app.use(apiProteger)
@@ -46,12 +61,13 @@ app.use(apiProteger)
 app.use('/api', apiUsuarios)
 
 
+
 //Fin
-app.use(function (req, res, next) {
+app.use(function (req, res, next) {        /* Si la peticion llega aca, ninguna ruta hizo match con alguna funcion  */
   res.status(404)
   res.json({error:"No hay nada por aqui"})
 })
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 app.listen(global.puerto || 3000, function () {
   global.log.info('Aplicacion corriendo en puerto '+(global.puerto || 3000))

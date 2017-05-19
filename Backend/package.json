@@ -4,11 +4,10 @@
   "description": "API del proyecto de inmobiliaria",
   "main": "servidor.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ROBOT=sensible JWT_SECRET=cambiame PUERTO=3000 nodemon servidor.js",
+    "iniciar": "JWT_SECRET=cambiame PUERTO=3000 nodemon servidor.js",
     "windows": "node servidor.js"
   },
-  "author": "@SAldrin",
+  "author": "Estudiantes de software1",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
