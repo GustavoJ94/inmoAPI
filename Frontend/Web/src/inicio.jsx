@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Inicio extends Component {
     render(){
-        return (<h1>Hola mundo, mi nombre es ***** !</h1>);
+        return (
+        	<MuiThemeProvider>
+	        	<div>
+	        		<AppBar title="Inmo" />
+	        		<RaisedButton label="Hola" primary={true}/>
+	        	</div>
+        	</MuiThemeProvider>
+        	);
     }
 }
 
