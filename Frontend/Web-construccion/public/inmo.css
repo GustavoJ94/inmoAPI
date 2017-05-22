@@ -1,0 +1,104 @@
+.imgSplash{
+	filter: drop-shadow(2px 5px 5px gray);
+}
+
+@keyframes animatedBackground {
+	from { background-position: right bottom; }
+	to { background-position: left bottom; }
+}
+
+/*.ald	{ 
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  filter: blur(5px);
+  background-image: url(https://stalbert.ca/global/images/headers/City-Map-banner.jpg);
+  background-repeat: repeat;
+  animation: animatedBackground 30s linear infinite;
+}*/
+body {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 320px;
+  height: 320px;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(45deg, rgba(255,255,255,0.2) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 0), rgba(227,242,249,1);
+  background: -moz-linear-gradient(45deg, rgba(255,255,255,0.2) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 0), rgba(227,242,249,1);
+  background: linear-gradient(45deg, rgba(255,255,255,0.2) 25%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 0), rgba(227,242,249,1);
+  background-position: auto auto;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 50px 50px;
+  background-size: 50px 50px;
+}
+
+.ald {
+	min-height: 100%;
+  	width: 100%;
+  	height: auto;
+  	position: fixed;
+  	z-index: -1;
+	background-image: url("https://i.imgur.com/LFGHHhL.png");
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 90vh;
+	animation: animatedBackground 30s linear infinite;
+}
+
+.fadein {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 216px);
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.fadein img {
+	position: absolute;
+	max-height: 60%;
+    filter: drop-shadow(2px 5px 5px gray);
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+#f1 {
+}
+#f2 {
+    -webkit-animation-delay: -2s;
+}
+#f3 {
+    -webkit-animation-delay: -4s;
+}
+#f4 {
+    -webkit-animation-delay: -6s;
+}
