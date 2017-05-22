@@ -6,7 +6,7 @@ var BUILD_DIR = path.resolve(__dirname, 'public');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  entry: APP_DIR + '/inicio.jsx',
+  entry: ["babel-polyfill",  APP_DIR + '/inicio.jsx'],
   output: {
     path: BUILD_DIR,
     filename: 'inmo.js'
