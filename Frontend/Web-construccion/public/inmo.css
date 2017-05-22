@@ -62,8 +62,14 @@ body {
   	display: -ms-flexbox;      /* TWEENER - IE 10 */
   	display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
     align-items: center;
+    height: -webkit-calc(100% - 216px);
+    height: -moz-calc(100% - 216px);
     height: calc(100% - 216px);
 }
 
