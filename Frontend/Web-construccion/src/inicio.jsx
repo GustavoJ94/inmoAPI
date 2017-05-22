@@ -33,6 +33,7 @@ class Inicio extends Component {
                 label="Muy pronto"
                 open
                 style={{backgroundColor:"none"}}
+                interval={5000}
               >
                 <Slide
                   media={<LogoMulti />}
