@@ -11,6 +11,15 @@ import FlatButton from 'material-ui/FlatButton';
 	clickRegistro
 */
 class Barra extends Component {
+	constructor(props) {
+		super(props);
+		this.state ={
+			titulo:'',
+			clickMenu:''
+		}
+		console.log(this.props);
+	}
+	 
     render(){
         return (
         		<Toolbar>
@@ -45,15 +54,12 @@ class Barra extends Component {
 				    <ToolbarGroup>
 				    	<FlatButton 
 				    		label="Registrate" 
-				    		backgroundColor="#a4c639" 
-				    		onClick={this.props.clickRegistro}
+				    		backgroundColor="#a4c639"				    		
 				    		/>
 
 			          	<FlatButton 
 			          		label="Inicia sesión" 
-			          		primary={true} 
-			          		backgroundColor="#a4c639"
-			          		onClick={this.props.clickIniciarSesion}
+			          		backgroundColor="#a4c639"			          		
 			          		/>
 
 			        </ToolbarGroup>

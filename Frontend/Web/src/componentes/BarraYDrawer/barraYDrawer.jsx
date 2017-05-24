@@ -3,15 +3,27 @@ import Barra from './componentes/barra/barra.jsx';
 import Drawer from './componentes/drawer/drawer.jsx';
 
 /*Props
-    clickMenu
-    titulo
-    clickIniciarSesion
-    clickRegistro
+   usuario
+   msgPorLeer
+   notPorVer
+   titulo
+   
+   clickMenu
+   clickIniciarSesion
+   clickRegistro
 */
 class BarraYDrawer extends Component {
-    state = {
-        open: false
+     constructor(props) {
+	 super(props);
+	 
+	 this.state = {
+        open: false,
+		usuario:'',
+		titulo:'Inmo',
+		msgPorLeer:0,
+		notPorVer:0
     };
+  }
 
     clickBoton = () => this.setState({open: !this.state.open});
 
@@ -19,6 +31,7 @@ class BarraYDrawer extends Component {
         return (
                 <div>
                     <Barra 
+						titulo={this.state.titulo}
                         clickMenu={this.clickBoton}
                         />
 
