@@ -16,6 +16,34 @@ import FlatButton from 'material-ui/FlatButton';
 ///
 
 class InmoDrawer extends Component {
+	 constructor(props) {
+	 super(props);
+	
+  }
+	clickConfiguracion = () => {
+		console.log('Configuracion');
+	};
+	
+	clickInmuebles = () => {
+		console.log('Inmuebles');
+	}
+	
+    clickBuscar = () =>{
+		console.log('Buscar');
+	}
+	
+    clickMapa = () => {
+		console.log('Mapa');
+	} 
+	
+	clickGlobo = () => {
+		console.log('Globo');
+	}	
+	
+	clickMensaje = () => {
+		console.log('Mensaje');
+	}
+
     render(){
         return (
 			<Drawer 
@@ -33,15 +61,15 @@ class InmoDrawer extends Component {
 					/>
 
 					<CardActions>
-					  <FlatButton icon={<Language />} hoverColor="rgba(0, 0, 0, 0)" style={{paddingLeft:"150px", color:"red"}} />
-					  <FlatButton icon={<Message />} hoverColor="rgba(0, 0, 0, 0)" style={{float:"right"}} />
+					  <FlatButton onTouchTap={this.clickGlobo} icon={<Language />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"90px", color:"red"}} />
+					  <FlatButton onTouchTap={this.clickMensaje} icon={<Message />} hoverColor="rgba(0, 0, 0, 0)" style={{marginLeft:"0px"}} />
 					</CardActions>
 				</Card>
 					         
-				<MenuItem leftIcon={<Build />} >Configuración</MenuItem>
-				<MenuItem leftIcon={<Bookmark />} >Inmuebles guardados</MenuItem>
-				<MenuItem leftIcon={<Search />} >Buscar</MenuItem>
-				<MenuItem leftIcon={<Map />} >Mapa</MenuItem>
+				<MenuItem leftIcon={<Build />} onTouchTap={this.clickConfiguracion} >Configuración</MenuItem>
+				<MenuItem leftIcon={<Bookmark />} onTouchTap={this.clickInmuebles} >Inmuebles guardados</MenuItem>
+				<MenuItem leftIcon={<Search />} onTouchTap={this.clickBuscar} >Buscar</MenuItem>
+				<MenuItem leftIcon={<Map />} onTouchTap={this.clickMapa} >Mapa</MenuItem>
 
 			</Drawer>
         	);

@@ -21,11 +21,17 @@ class BarraYDrawer extends Component {
 		usuario:'',
 		titulo:'Inmo',
 		msgPorLeer:0,
-		notPorVer:0
+		notPorVer:0,
+		user:{
+			id:'',
+			imagen:'inmo.com/img/'
+		}
     };
   }
 
     clickBoton = () => this.setState({open: !this.state.open});
+    clickIniciarSesion = () => {}
+    clickRegistro = () => {}
 
     render(){
         return (

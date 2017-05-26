@@ -17,7 +17,7 @@ class Barra extends Component {
 			titulo:'',
 			clickMenu:''
 		}
-		console.log(this.props);
+		console.log(props);
 	}
 	 
     render(){
